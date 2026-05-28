@@ -1,0 +1,102 @@
+/* Container Principal: Centraliza tudo na tela */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: flex-start;
+  width: 100vw; /* Ocupa 100% da largura da janela */
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: #f4f7f6;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+header h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Caixa de Busca: Acima do card */
+.search-box {
+  display: flex;
+  justify-content: center; /* Garante que input e botão estejam centrados entre si */
+  gap: 10px;
+  width: 90%;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #ff5522;
+}
+
+.search-box button {
+  padding: 12px 25px;
+  background-color: #ff5522;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #e64a19;
+}
+
+/* O Card do Pokémon centralizado */
+.pokemon-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 90%; /* Largura responsiva */
+  max-width: 450px; /* Tamanho máximo do quadro */
+  margin: 0 auto; /* Centralização extra de segurança */
+  animation: fadeIn 0.5s ease-out;
+}
+
+.card-header h2 {
+  margin: 0;
+  color: #444;
+}
+
+.card-header p {
+  color: #777;
+  margin: 10px 0 20px;
+}
+
+.pokemon-display img {
+  width: 180px;
+  height: 180px;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+.pokemon-name {
+  color: #ff5522;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+
+/* Animação para o card aparecer suavemente */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loader {
+  font-weight: bold;
+  color: #666;
+}

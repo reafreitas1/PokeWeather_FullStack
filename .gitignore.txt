@@ -1,0 +1,14 @@
+# Pasta do Angular
+**/node_modules/
+**/dist/
+**/.angular/
+
+# Pasta do Java
+**/target/
+**/.idea/
+**/*.iml
+**/bin/
+
+# Outros
+.DS_Store
+.vscode/
