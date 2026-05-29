@@ -8,5 +8,5 @@ public record WeatherResponse(
         String name
 ) {
     public record Main(double temp) {}
-    public record Weather(String main) {} // Ex: "Rain", "Clouds", "Clear"
+    public record Weather(String main) {}
 }

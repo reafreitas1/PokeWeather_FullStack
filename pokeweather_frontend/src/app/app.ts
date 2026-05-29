@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PokemonService } from './pokemon'; // Certifique-se que o arquivo é pokemon.ts
+import { PokemonService } from './pokemon';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent {
   result: any = null;
   loading = false;
 
-  // Usando inject (Padrão Angular 18)
+
   private pokeService = inject(PokemonService);
 
   search() {
@@ -24,7 +24,7 @@ export class AppComponent {
     this.loading = true;
     this.result = null;
 
-    // Use o nome exato da variável definida no inject: 'this.pokeService'
+
     this.pokeService.getPokemonByCity(this.city).subscribe({
       next: (data) => {
         this.result = data;
@@ -32,7 +32,7 @@ export class AppComponent {
       },
       error: (err) => {
         console.error(err);
-        alert("Erro ao buscar dados. O Java está rodando?");
+        alert("Error fetching data. Is the backend server running?");
         this.loading = false;
       }
     });

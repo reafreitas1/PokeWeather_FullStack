@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/pokemon")
-@CrossOrigin(origins = "http://localhost:4200") // IMPORTANTE: Libera o acesso para o Angular
+@CrossOrigin(origins = "http://localhost:4200")
 public class PokeWeatherController {
 
     private final PokeWeatherService service;

@@ -1,32 +1,28 @@
 <div class="main-container">
 
-  <!-- Título principal -->
   <header>
     <h1>Pokémon Weather Finder</h1>
   </header>
 
-  <!-- Área de Busca (Fica no topo) -->
   <div class="search-box">
-    <input [(ngModel)]="city" (keyup.enter)="search()" placeholder="Digite o nome da cidade (ex: São Paulo)">
-    <button (click)="search()">Buscar</button>
+    <input [(ngModel)]="city" (keyup.enter)="search()" placeholder="Search for a city...">
+    <button (click)="search()">Search</button>
   </div>
 
-  <!-- Área de Conteúdo (Centralizada) -->
   <main class="content-area">
 
     @if (loading) {
-      <div class="loader">Buscando Pokémon ideal...</div>
+      <div class="loader">Wild Pokémon appearing...</div>
     }
 
     @if (result && !loading) {
       <div class="pokemon-card">
         <div class="card-header">
-          <h2>Em {{ result.city }}, está {{ result.temp }}°C</h2>
-          <p>O tipo ideal para este clima é: <strong>{{ result.pokemonType | uppercase }}</strong></p>
+          <h2>Currently {{ result.temp }}°C in {{ result.city }}</h2>
+          <p>Matching type for this weather: <strong>{{ result.pokemonType | uppercase }}</strong></p>
         </div>
 
         <div class="pokemon-display">
-          <!-- Imagem dinâmica do Pokémon -->
           <img [src]="'https://img.pokemondb.net/sprites/home/normal/' + result.pokemonName + '.png'"
                [alt]="result.pokemonName">
 

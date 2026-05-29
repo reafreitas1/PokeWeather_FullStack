@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Adicionei esta linha que faltava
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PokemonService } from './pokemon'; // Mudei de './pokemon.service' para './pokemon'
+import { PokemonService } from './pokemon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './app.html', // Mudei para o seu nome de arquivo real
-  styleUrl: './app.css'      // Mudei para o seu nome de arquivo real
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class AppComponent {
   city: string = '';
@@ -22,11 +22,11 @@ export class AppComponent {
 
     this.loading = true;
     this.pokemonService.getPokemonByCity(this.city).subscribe({
-      next: (data: any) => { // Adicionei ': any' para evitar erro de tipo
+      next: (data: any) => {
         this.result = data;
         this.loading = false;
       },
-      error: (err: any) => { // Adicionei ': any' para evitar erro de tipo
+      error: (err: any) => {
         alert("Cidade não encontrada ou erro no servidor!");
         this.loading = false;
       }

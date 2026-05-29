@@ -1,14 +1,13 @@
-/* Container Principal: Centraliza tudo na tela */
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
+  align-items: center;
   justify-content: flex-start;
-  width: 100vw; /* Ocupa 100% da largura da janela */
+  width: 100vw;
   min-height: 100vh;
   padding-top: 50px;
   background-color: #f4f7f6;
-  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+  box-sizing: border-box;
 }
 
 header h1 {
@@ -16,10 +15,10 @@ header h1 {
   margin-bottom: 30px;
 }
 
-/* Caixa de Busca: Acima do card */
+
 .search-box {
   display: flex;
-  justify-content: center; /* Garante que input e botão estejam centrados entre si */
+  justify-content: center;
   gap: 10px;
   width: 90%;
   max-width: 450px;
@@ -55,16 +54,16 @@ header h1 {
   background-color: #e64a19;
 }
 
-/* O Card do Pokémon centralizado */
+
 .pokemon-card {
   background: white;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
-  width: 90%; /* Largura responsiva */
-  max-width: 450px; /* Tamanho máximo do quadro */
-  margin: 0 auto; /* Centralização extra de segurança */
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -90,7 +89,7 @@ header h1 {
   letter-spacing: 2px;
 }
 
-/* Animação para o card aparecer suavemente */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
