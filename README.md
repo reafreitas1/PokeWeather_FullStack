@@ -61,3 +61,5 @@ The project integrates seamlessly with the PokéAPI, fetching real-time data to 
 - **Frontend:** Angular 18 (Standalone)
 - **Styling:** CSS3 (Flexbox & Responsive Design)
 - **External APIs:** OpenWeatherMap & PokéAPI
+
+  Developed by Renata Freitas - [[LinkedIn](https://www.linkedin.com/in/reafreitas1/)]
